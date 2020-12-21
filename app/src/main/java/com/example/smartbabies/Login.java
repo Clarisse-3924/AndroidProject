@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
     @BindView(R.id.textView7) TextView  create;
     @BindView(R.id.Pass) EditText  textpass;
     @BindView(R.id.button2) Button login;
-    @BindView(R.id.progressBar2) gitProgressBar progressBar;
+    @BindView(R.id.progressBar2) ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,27 +50,15 @@ public class Login extends AppCompatActivity {
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                //Authenticate the user
-                fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Login.this, "you have succesfully logged", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), Signup.class));
-                        } else {
-                            Toast.makeText(Login.this, "error occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-                        }
-                    }
-                });
 
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
             }
         });
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Signup.class));
 
             }
         });
