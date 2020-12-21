@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 public class Signup extends AppCompatActivity {
     @BindView(R.id.button) Button Register;
     @BindView(R.id.name) EditText texname;
-    @BindView(R.id.name) EditText  textEmai;
+    @BindView(R.id.name) EditText  textEmail;
     @BindView(R.id.name) EditText textPhone;
     @BindView(R.id.name) EditText    textpass;
     @BindView(R.id.textView4) TextView loginhere;
@@ -32,7 +32,7 @@ public class Signup extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        register.setOnClickListener(new View.OnClickListener(){
+        Register.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 String email = textEmail.getText().toString().trim();
@@ -74,19 +74,7 @@ public class Signup extends AppCompatActivity {
                 }
                 progressBar.setVisibility(View.VISIBLE);
                 // register user
-                fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "user created", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),Signup.class));
-                        } else {
-                            Toast.makeText(MainActivity.this, "error occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-
-                        }
-                    }
-                });
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
         loginhere.setOnClickListener(new View.OnClickListener() {
