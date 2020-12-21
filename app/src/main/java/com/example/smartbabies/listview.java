@@ -4,7 +4,7 @@ public class listview {
     int image;
     String name,addToCart,price;
 
-    public listview(int image, String name, String addToCart,String price) {
+    public listview(int image, String name,String price,String addToCart) {
         this.image = image;
         this.name = name;
         this.price = price;
@@ -19,10 +19,11 @@ public class listview {
         return name;
     }
 
-    public String getAddToCart() {
-        return addToCart;
-    }
+
     public String getPrice() {
         return price;
+    }
+    public String getAddToCart() {
+        return addToCart;
     }
 }

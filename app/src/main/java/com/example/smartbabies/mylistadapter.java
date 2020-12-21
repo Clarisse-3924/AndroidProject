@@ -28,7 +28,7 @@ public class mylistadapter extends ArrayAdapter<listview> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.store,null);
+        View view = inflater.inflate(resource,null);
         TextView textViewName= view.findViewById(R.id.name);
         TextView textViewPrice=view.findViewById(R.id.price);
         TextView textViewCart=view.findViewById(R.id.cart);
