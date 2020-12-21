@@ -13,7 +13,7 @@ public class Login extends AppCompatActivity {
 
     create= findViewById(R.id.textView7);
     login = findViewById(R.id.button2);
-    fAuth=FirebaseAuth.getInstance();
+
 
     progressBar = findViewById(R.id.progressBar2);
 
