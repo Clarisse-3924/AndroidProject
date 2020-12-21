@@ -9,9 +9,6 @@ import android.widget.TextView;
 import butterknife.BindView;
 
 public class Login extends AppCompatActivity {
-
-    progressBar = findViewById(R.id.progressBar2);
-
     @BindView(R.id.email1) EditText textEmail;
     @BindView(R.id.textView7) TextView  create;
     @BindView(R.id.Pass) EditText  textpass;
