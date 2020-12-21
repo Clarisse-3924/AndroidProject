@@ -9,4 +9,16 @@ public class listview {
         this.name = name;
         this.addToCart = addToCart;
     }
+
+    public int getImage() {
+        return image;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddToCart() {
+        return addToCart;
+    }
 }
