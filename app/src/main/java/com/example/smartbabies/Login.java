@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,13 +20,15 @@ public class Login extends AppCompatActivity {
     @BindView(R.id.email1) EditText textEmail;
     @BindView(R.id.textView7) TextView  create;
     @BindView(R.id.Pass) EditText  textpass;
-    @BindView(R.id.button2) EditText   login;
+    @BindView(R.id.button2) Button login;
+    @BindView(R.id.progressBar2) gitProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
