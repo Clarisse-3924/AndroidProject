@@ -10,11 +10,6 @@ import butterknife.BindView;
 
 public class Login extends AppCompatActivity {
 
-
-    create= findViewById(R.id.textView7);
-    login = findViewById(R.id.button2);
-
-
     progressBar = findViewById(R.id.progressBar2);
 
     @BindView(R.id.email1) EditText textEmail;
