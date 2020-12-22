@@ -16,18 +16,31 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class Login extends AppCompatActivity {
-    @BindView(R.id.email1) EditText textEmail;
-    @BindView(R.id.textView7) TextView  create;
-    @BindView(R.id.Pass) EditText  textpass;
-    @BindView(R.id.button2) Button login;
+   @BindView(R.id.email1) EditText textEmail;
+ @BindView(R.id.textView7) TextView  create;
+  @BindView(R.id.Pass) EditText  textpass;
+ @BindView(R.id.button2) Button login;
     @BindView(R.id.progressBar2) ProgressBar progressBar;
+
+//EditText textEmail,textpass;
+//    TextView create;
+//    ProgressBar progressBar;
+//    Button login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        ButterKnife.bind(this);
+       ButterKnife.bind(this);
+////        textEmail =findViewById(R.id.email1);
+////        textpass =  findViewById(R.id.Pass);
+////        create= findViewById(R.id.textView7);
+////        login = findViewById(R.id.button2);
+//
+//        progressBar = findViewById(R.id.progressBar2);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

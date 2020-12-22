@@ -16,21 +16,32 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class Signup extends AppCompatActivity {
     @BindView(R.id.button) Button Register;
     @BindView(R.id.name) EditText texname;
-    @BindView(R.id.name) EditText  textEmail;
-    @BindView(R.id.name) EditText textPhone;
-    @BindView(R.id.name) EditText    textpass;
+    @BindView(R.id.Email) EditText  textEmail;
+    @BindView(R.id.Phone) EditText textPhone;
+    @BindView(R.id.Password) EditText    textpass;
     @BindView(R.id.textView4) TextView loginhere;
-    @BindView(R.id.progressBar) ProgressBar progressBar;
-
+  @BindView(R.id.progressBar) ProgressBar progressBar;
+//   EditText texname, textEmail ,textPhone,textpass;
+//    Button Register;
+//    TextView loginhere;
+//    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        ButterKnife.bind(this);
+   ButterKnife.bind(this);
+//        texname = findViewById(R.id.name);
+//        textEmail =findViewById(R.id.Email);
+//        textPhone =findViewById(R.id.Phone);
+//        textpass =  findViewById(R.id.Password);
+//        loginhere = findViewById(R.id.textView4);
+//        Register = findViewById(R.id.button);
+//        progressBar = findViewById(R.id.progressBar);
 
         Register.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -74,7 +85,7 @@ public class Signup extends AppCompatActivity {
                 }
                 progressBar.setVisibility(View.VISIBLE);
                 // register user
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
         loginhere.setOnClickListener(new View.OnClickListener() {
