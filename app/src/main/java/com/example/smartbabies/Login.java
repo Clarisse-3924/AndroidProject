@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
   @BindView(R.id.Pass) EditText  textpass;
  @BindView(R.id.button2) Button login;
     @BindView(R.id.progressBar2) ProgressBar progressBar;
-
+    private EditText Name;
 //EditText textEmail,textpass;
 //    TextView create;
 //    ProgressBar progressBar;
@@ -34,6 +34,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Name = (EditText) findViewById(R.id.name);
        ButterKnife.bind(this);
 ////        textEmail =findViewById(R.id.email1);
 ////        textpass =  findViewById(R.id.Pass);
@@ -63,8 +64,11 @@ public class Login extends AppCompatActivity {
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
+                String name = Name.getText().toString();
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                intent.putExtra("name", name);
+                startActivity(intent);
 
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
             }
         });
